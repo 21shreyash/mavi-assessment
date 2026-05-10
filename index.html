@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Head of Supply Growth | Shreyash Gupta | MAVI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:        #07071A;
+  --bg-card:   #0D0D28;
+  --accent:    #5B6BF8;
+  --accent-lt: rgba(91,107,248,0.12);
+  --accent-bd: rgba(91,107,248,0.28);
+  --amber:     #F59E0B;
+  --amber-lt:  rgba(245,158,11,0.12);
+  --green:     #10B981;
+  --green-lt:  rgba(16,185,129,0.12);
+  --purple:    #A78BFA;
+  --purple-lt: rgba(167,139,250,0.12);
+  --text:      #F0F2FF;
+  --text-2:    #9AA3C0;
+  --text-3:    #555E80;
+  --border:    rgba(255,255,255,0.07);
+  --fh:        'Sora', sans-serif;
+  --fb:        'DM Sans', sans-serif;
+  --r:         12px;
+  --r-sm:      8px;
+}
+
+html { scroll-behavior: smooth; }
+body { font-family: var(--fb); background: var(--bg); color: var(--text); line-height: 1.6; font-size: 15px; }
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  height: 58px; padding: 0 48px;
+  display: flex; align-items: center; justify-content: space-between;
+  background: rgba(7,7,26,0.88); backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-brand { display:flex; align-items:center; gap:10px; text-decoration:none; }
+.nav-logo {
+  width:30px; height:30px; border-radius:7px; background:var(--accent);
+  display:flex; align-items:center; justify-content:center;
+  font-family:var(--fh); font-weight:800; font-size:14px; color:#fff;
+}
+.nav-name { font-family:var(--fh); font-size:13px; font-weight:600; color:var(--text); }
+.nav-links { display:flex; gap:2px; list-style:none; }
+.nav-links a {
+  display:block; padding:6px 14px; font-size:13px; font-weight:500;
+  color:var(--text-2); text-decoration:none; border-radius:6px; transition:all .2s;
+}
+.nav-links a:hover, .nav-links a.active { color:var(--text); background:var(--accent-lt); }
+.nav-pill {
+  font-size:11px; padding:4px 12px; background:var(--accent-lt);
+  color:var(--accent); border:1px solid var(--accent-bd);
+  border-radius:20px; font-weight:700; font-family:var(--fh);
+}
+
+/* ── SECTIONS ── */
+.sec { position:relative; max-width:1120px; margin:0 auto; padding:96px 48px; }
+.sec + .sec { border-top:1px solid var(--border); }
+
+.sec-tag {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:11px; font-weight:700; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:14px;
+}
+.sec-tag::before { content:''; width:18px; height:2px; background:var(--accent); border-radius:2px; }
+h2 {
+  font-family:var(--fh); font-size:clamp(24px,3vw,34px); font-weight:700;
+  line-height:1.2; letter-spacing:-.02em; margin-bottom:8px;
+}
+.sec-sub { font-size:15px; color:var(--text-2); max-width:640px; margin-bottom:52px; line-height:1.65; }
+
+/* ── ANIMATIONS ── */
+.fu { opacity:0; transform:translateY(22px); transition:opacity .6s ease,transform .6s ease; }
+.fu.vis { opacity:1; transform:translateY(0); }
+.fu:nth-child(2){transition-delay:.08s} .fu:nth-child(3){transition-delay:.16s}
+.fu:nth-child(4){transition-delay:.24s} .fu:nth-child(5){transition-delay:.32s}
+
+/* ── HERO ── */
+#hero {
+  min-height:100vh; max-width:100%; padding:130px 80px 100px;
+  display:flex; flex-direction:column; justify-content:center;
+  position:relative; overflow:hidden;
+}
+.hero-dots {
+  position:absolute; inset:0; pointer-events:none;
+  background-image:radial-gradient(rgba(91,107,248,.14) 1px, transparent 1px);
+  background-size:30px 30px;
+}
+.hero-glow {
+  position:absolute; right:-80px; top:50%; transform:translateY(-50%);
+  width:560px; height:560px; pointer-events:none;
+  background:radial-gradient(circle,rgba(91,107,248,.16) 0%,transparent 70%);
+}
+.hero-inner { position:relative; max-width:1120px; margin:0 auto; width:100%; }
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px; padding:5px 14px;
+  border-radius:20px; background:var(--accent-lt); border:1px solid var(--accent-bd);
+  font-size:12px; font-weight:700; color:var(--accent); font-family:var(--fh);
+  letter-spacing:.05em; margin-bottom:28px;
+}
+.hero-badge-dot { width:7px; height:7px; border-radius:50%; background:var(--accent); animation:blink 2s infinite; }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.35} }
+h1 {
+  font-family:var(--fh); font-size:clamp(38px,5.5vw,64px); font-weight:800;
+  line-height:1.08; letter-spacing:-.03em; margin-bottom:24px;
+}
+h1 .ac { color:var(--accent); }
+.hero-desc { font-size:17px; color:var(--text-2); max-width:560px; margin-bottom:52px; line-height:1.7; }
+.hero-stats { display:flex; gap:0; }
+.hero-stat { padding:0 36px 0 0; margin:0 36px 0 0; border-right:1px solid var(--border); }
+.hero-stat:last-child { border:none; padding:0; margin:0; }
+.hero-stat-val { font-family:var(--fh); font-size:22px; font-weight:700; color:var(--text); display:block; }
+.hero-stat-lbl { font-size:11px; color:var(--text-3); text-transform:uppercase; letter-spacing:.08em; }
+
+/* ── FUNNEL ── */
+.funnel-layout { display:grid; grid-template-columns:1fr 300px; gap:32px; }
+.funnel-col { display:flex; flex-direction:column; }
+
+.fstage { display:flex; flex-direction:column; align-items:center; }
+.fbar-wrap { width:100%; display:flex; justify-content:center; }
+
+.fbar {
+  background:linear-gradient(135deg,rgba(91,107,248,.22),rgba(91,107,248,.08));
+  border:1px solid var(--accent-bd); border-radius:var(--r-sm);
+  padding:14px 18px; display:flex; align-items:center;
+  justify-content:space-between; gap:12px;
+  transition:all .25s; cursor:pointer; position:relative;
+  overflow: hidden;
+}
+.fbar:hover {
+  background:linear-gradient(135deg,rgba(91,107,248,.32),rgba(91,107,248,.14));
+  border-color:rgba(91,107,248,.6);
+}
+.fbar.open {
+  background:linear-gradient(135deg,rgba(91,107,248,.35),rgba(91,107,248,.15));
+  border-color:var(--accent); border-bottom-left-radius:0; border-bottom-right-radius:0;
+}
+.fstage:last-child .fbar {
+  background:linear-gradient(135deg,rgba(91,107,248,.5),rgba(91,107,248,.28));
+  border-color:var(--accent);
+}
+.fstage:nth-child(1) .fbar { width:100%; }
+.fstage:nth-child(3) .fbar { width:84%; }
+.fstage:nth-child(5) .fbar { width:72%; }
+.fstage:nth-child(7) .fbar { width:57%; }
+.fstage:nth-child(9) .fbar { width:50%; }
+
+.fbar-left { flex: 1 1 0; min-width: 0; }
+.fbar-name { font-family:var(--fh); font-weight:600; font-size:13px; color:var(--text); }
+.fbar-desc { font-size:12px; color:var(--text-2); margin-top:3px; }
+.fbar-right { display:flex; align-items:center; gap:10px; flex-shrink:0; }
+.fvol { font-family:var(--fh); font-weight:700; font-size:18px; }
+.fbar-toggle {
+  width:22px; height:22px; border-radius:50%;
+  background:var(--accent-lt); border:1px solid var(--accent-bd);
+  display:flex; align-items:center; justify-content:center;
+  font-size:14px; color:var(--accent); font-weight:700;
+  transition:transform .3s; flex-shrink:0; line-height:1;
+}
+.fbar.open .fbar-toggle { transform:rotate(45deg); }
+
+.pill {
+  font-size:10px; font-weight:700; padding:3px 8px;
+  border-radius:20px; text-transform:uppercase; letter-spacing:.05em; white-space:nowrap;
+}
+.pill.auto  { background:var(--green-lt);  color:var(--green);  border:1px solid rgba(16,185,129,.25); }
+.pill.human { background:var(--amber-lt);  color:var(--amber);  border:1px solid rgba(245,158,11,.25); }
+.pill.async { background:var(--purple-lt); color:var(--purple); border:1px solid rgba(167,139,250,.25); }
+
+/* Funnel detail panel */
+.fdetail {
+  overflow:hidden; max-height:0;
+  transition:max-height .45s cubic-bezier(.4,0,.2,1), opacity .3s ease;
+  opacity:0; width:100%;
+}
+.fdetail.open { max-height:400px; opacity:1; }
+
+.fdetail-inner {
+  background:rgba(91,107,248,.06); border:1px solid var(--accent-bd);
+  border-top:none; border-radius:0 0 var(--r-sm) var(--r-sm);
+  padding:16px 18px; display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;
+}
+/* For stages with narrower bars, we need to match the width */
+.fstage:nth-child(3) .fdetail-inner { /* matches 84% width */ }
+
+.fdetail-col-title {
+  font-size:10px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.09em; color:var(--accent); margin-bottom:6px;
+}
+.fdetail-col-text { font-size:12px; color:var(--text-2); line-height:1.55; }
+
+.farrow {
+  display:flex; align-items:center; justify-content:center;
+  padding:4px 0; gap:10px;
+}
+.farrow-line { width:1px; height:14px; background:var(--accent-bd); }
+.farrow-txt { font-size:10px; color:var(--text-3); font-weight:600; letter-spacing:.04em; white-space:nowrap; }
+
+/* Sidebar */
+.funnel-side { display:flex; flex-direction:column; gap:14px; }
+.scard {
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:var(--r); padding:18px; transition:border-color .2s;
+}
+.scard:hover { border-color:var(--accent-bd); }
+.scard-title {
+  font-family:var(--fh); font-size:11px; font-weight:700;
+  text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:10px;
+}
+.scard ul { list-style:none; display:flex; flex-direction:column; gap:6px; }
+.scard ul li {
+  font-size:12px; color:var(--text-2); line-height:1.5;
+  padding-left:14px; position:relative;
+}
+.scard ul li::before { content:'→'; position:absolute; left:0; color:var(--accent); font-size:10px; top:1px; }
+
+/* ── SYSTEM DESIGN ── */
+.flow-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:2px; background:var(--border); border-radius:var(--r);
+  overflow:hidden; margin-bottom:8px;
+}
+.flow-cell {
+  background:var(--bg-card); padding:22px 20px;
+  cursor:pointer; transition:background .2s; position:relative;
+}
+.flow-cell:hover { background:#111130; }
+.flow-cell.selected { background:var(--accent-lt); }
+.flow-cell.selected::after {
+  content:''; position:absolute; bottom:-2px; left:50%;
+  transform:translateX(-50%);
+  border:6px solid transparent; border-top-color:var(--accent);
+}
+
+.flow-badge {
+  display:inline-flex; align-items:center; gap:5px;
+  font-size:10px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.07em; padding:3px 9px; border-radius:20px; margin-bottom:10px;
+}
+.flow-badge.auto  { background:var(--green-lt);  color:var(--green); }
+.flow-badge.human { background:var(--amber-lt);  color:var(--amber); }
+.flow-badge.semi  { background:var(--purple-lt); color:var(--purple); }
+.flow-badge.cap   { background:var(--accent-lt); color:var(--accent); }
+
+.flow-name   { font-family:var(--fh); font-size:13px; font-weight:600; margin-bottom:7px; line-height:1.3; }
+.flow-detail { font-size:12px; color:var(--text-2); line-height:1.55; }
+.flow-tool   { margin-top:10px; font-size:11px; color:var(--text-3); font-weight:500; }
+.flow-click-hint { margin-top:10px; font-size:10px; color:var(--accent); font-weight:600; opacity:.7; }
+
+/* Flow detail panel */
+#flow-detail-panel {
+  background:var(--bg-card); border:1px solid var(--accent-bd);
+  border-radius:0 0 var(--r) var(--r); padding:0;
+  overflow:hidden; max-height:0; opacity:0;
+  transition:max-height .4s cubic-bezier(.4,0,.2,1), opacity .3s, padding .3s;
+}
+#flow-detail-panel.open {
+  max-height:300px; opacity:1; padding:24px 28px;
+}
+.fdp-title { font-family:var(--fh); font-size:14px; font-weight:700; margin-bottom:12px; color:var(--text); }
+.fdp-grid  { display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px; }
+.fdp-col-label { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--accent); margin-bottom:5px; }
+.fdp-col-text  { font-size:13px; color:var(--text-2); line-height:1.6; }
+
+.sys-bottom { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin-top:20px; }
+.sys-card { background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r); padding:26px; }
+.sys-title {
+  font-family:var(--fh); font-size:14px; font-weight:700;
+  margin-bottom:18px; display:flex; align-items:center; gap:8px;
+}
+.sys-title .dot { width:7px; height:7px; border-radius:50%; background:var(--accent); }
+
+.tool-row {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:9px 0; border-bottom:1px solid var(--border); gap:8px;
+}
+.tool-row:last-child { border-bottom:none; }
+.tool-fn  { font-size:12px; color:var(--text-2); flex:1; }
+.tool-nm  { font-size:12px; font-weight:600; color:var(--text); font-family:var(--fh); }
+.tool-eng { font-size:11px; color:var(--green); font-weight:600; white-space:nowrap; }
+
+.loop {
+  border-left:2px solid var(--accent-bd); padding:11px 14px; margin-bottom:12px;
+  border-radius:0 var(--r-sm) var(--r-sm) 0; background:rgba(255,255,255,.015);
+}
+.loop:last-child { margin-bottom:0; }
+.loop.loop2 { border-left-color:rgba(245,158,11,.35); }
+.loop-lbl { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:var(--accent); margin-bottom:5px; }
+.loop.loop2 .loop-lbl { color:var(--amber); }
+.loop-txt { font-size:12px; color:var(--text-2); line-height:1.55; }
+
+/* ── TEAM ── */
+.team-grid { display:grid; grid-template-columns:1fr 1fr; gap:40px; }
+.team-sec-label { font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:.09em; color:var(--text-3); margin-bottom:22px; }
+
+.org { display:flex; flex-direction:column; align-items:center; }
+.org-row { display:flex; gap:16px; justify-content:center; }
+.org-node {
+  background:var(--bg-card); border:1px solid var(--border); border-radius:var(--r-sm);
+  padding:14px 18px; text-align:center; min-width:138px; transition:border-color .2s;
+}
+.org-node:hover { border-color:var(--accent-bd); }
+.org-node.top { background:var(--accent-lt); border-color:var(--accent-bd); }
+.org-node-title { font-family:var(--fh); font-size:13px; font-weight:600; margin-bottom:4px; }
+.org-node-sub   { font-size:12px; color:var(--text-3); line-height:1.4; }
+.org-line { width:1px; height:22px; background:var(--border); margin:0 auto; }
+.scale-note { font-size:11px; color:var(--accent); font-weight:600; text-align:center; margin-top:8px; }
+
+.cf-tbl { width:100%; border-collapse:collapse; }
+.cf-tbl th {
+  text-align:left; font-size:11px; font-weight:700; text-transform:uppercase;
+  letter-spacing:.08em; color:var(--text-3); padding:8px 12px; border-bottom:1px solid var(--border);
+}
+.cf-tbl td {
+  padding:13px 12px; font-size:13px; color:var(--text-2);
+  border-bottom:1px solid var(--border); vertical-align:top; line-height:1.55;
+}
+.cf-tbl td:first-child { font-weight:600; color:var(--text); font-family:var(--fh); white-space:nowrap; }
+.cf-tbl tr:last-child td { border-bottom:none; }
+
+/* ── LEADERSHIP ── */
+#leadership { padding-bottom:120px; }
+.l-grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+.lcard {
+  background:var(--bg-card); border:1px solid var(--border);
+  border-radius:var(--r); padding:26px; transition:border-color .2s;
+}
+.lcard:hover { border-color:var(--accent-bd); }
+.lcard.wide { grid-column:1/-1; }
+
+.lcard-tag { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--accent); margin-bottom:8px; }
+.lcard h3  { font-family:var(--fh); font-size:15px; font-weight:700; margin-bottom:14px; line-height:1.3; }
+.lcard p   { font-size:13px; color:var(--text-2); line-height:1.65; margin-bottom:10px; }
+.lcard p:last-child { margin-bottom:0; }
+
+.lbullets { list-style:none; display:flex; flex-direction:column; gap:7px; }
+.lbullets li {
+  font-size:13px; color:var(--text-2); padding-left:16px;
+  position:relative; line-height:1.55;
+}
+.lbullets li::before {
+  content:'·'; position:absolute; left:3px; color:var(--accent);
+  font-weight:700; font-size:18px; line-height:1; top:1px;
+}
+
+/* Proof card + expand */
+.proof {
+  background:var(--accent-lt); border:1px solid var(--accent-bd);
+  border-radius:var(--r-sm); padding:16px; margin-top:16px;
+}
+.proof-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; }
+.proof-lbl { font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.1em; color:var(--accent); }
+.proof-expand-btn {
+  font-size:11px; color:var(--accent); font-weight:700; cursor:pointer;
+  background:none; border:1px solid var(--accent-bd); border-radius:20px;
+  padding:3px 10px; transition:all .2s; font-family:var(--fb);
+}
+.proof-expand-btn:hover { background:var(--accent); color:#fff; }
+.proof-stats { display:flex; gap:20px; margin-bottom:0; }
+.proof-stat-val { font-family:var(--fh); font-size:20px; font-weight:700; display:block; }
+.proof-stat-lbl { font-size:10px; color:var(--text-2); }
+
+/* Expandable story */
+.proof-story {
+  overflow:hidden; max-height:0; opacity:0;
+  transition:max-height .4s cubic-bezier(.4,0,.2,1), opacity .3s, margin .3s;
+  margin-top:0;
+}
+.proof-story.open { max-height:300px; opacity:1; margin-top:14px; }
+.proof-story ul { list-style:none; display:flex; flex-direction:column; gap:7px; }
+.proof-story ul li {
+  font-size:12px; color:var(--text-2); padding-left:14px;
+  position:relative; line-height:1.55;
+}
+.proof-story ul li::before { content:'→'; position:absolute; left:0; color:var(--accent); font-size:10px; top:2px; }
+
+/* Steps */
+.steps { display:flex; flex-direction:column; gap:13px; }
+.step  { display:flex; gap:12px; align-items:flex-start; }
+.step-num {
+  width:22px; height:22px; border-radius:50%; flex-shrink:0;
+  background:var(--accent-lt); border:1px solid var(--accent-bd);
+  display:flex; align-items:center; justify-content:center;
+  font-size:11px; font-weight:700; color:var(--accent); font-family:var(--fh);
+}
+.step-title { font-family:var(--fh); font-size:13px; font-weight:600; margin-bottom:2px; }
+.step-text  { font-size:12px; color:var(--text-2); line-height:1.5; }
+
+/* Influence */
+.inf-item {
+  border-left:2px solid var(--accent-bd); padding:10px 14px;
+  background:rgba(255,255,255,.015); border-radius:0 var(--r-sm) var(--r-sm) 0;
+  margin-bottom:10px;
+}
+.inf-item:last-child { margin-bottom:0; }
+.inf-title { font-family:var(--fh); font-size:12px; font-weight:700; color:var(--accent); margin-bottom:4px; }
+.inf-text  { font-size:12px; color:var(--text-2); line-height:1.5; }
+
+/* Hire tables */
+.hire-wrap { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:16px; }
+.hire-sub  { font-size:12px; font-weight:700; color:var(--text-2); text-transform:uppercase; letter-spacing:.06em; margin-bottom:8px; }
+.hire-desc { font-size:12px; color:var(--text-2); line-height:1.55; margin-bottom:10px; }
+.hire-tbl  { width:100%; border-collapse:collapse; }
+.hire-tbl th { text-align:left; font-size:10px; font-weight:700; text-transform:uppercase; letter-spacing:.07em; color:var(--text-3); padding:6px 10px; border-bottom:1px solid var(--border); }
+.hire-tbl td { padding:9px 10px; font-size:12px; line-height:1.45; border-bottom:1px solid var(--border); vertical-align:top; }
+.hire-tbl td:first-child { color:var(--text-3); font-weight:500; }
+.hire-tbl td:nth-child(2) { color:var(--green); }
+.hire-tbl td:nth-child(3) { color:var(--text-2); }
+.hire-tbl tr:last-child td { border-bottom:none; }
+
+.cadence-bar { margin-top:14px; padding-top:13px; border-top:1px solid var(--border); font-size:12px; color:var(--text-3); }
+.cadence-bar strong { color:var(--text-2); }
+
+/* ── FOOTER ── */
+footer { border-top:1px solid var(--border); padding:28px 80px; display:flex; justify-content:space-between; align-items:center; }
+.footer-l { font-size:13px; color:var(--text-3); }
+.footer-r { font-size:12px; color:var(--text-3); }
+
+/* ── RESPONSIVE ── */
+@media(max-width:800px){
+  nav { padding:0 20px; }
+  .nav-links, .nav-pill { display:none; }
+  #hero { padding:100px 24px 60px; }
+  .sec { padding:72px 24px; }
+  .funnel-layout,.sys-bottom,.team-grid,.l-grid,.hire-wrap { grid-template-columns:1fr; }
+  .flow-grid { grid-template-columns:1fr; }
+  .lcard.wide { grid-column:1; }
+  .fdetail-inner,.fdp-grid { grid-template-columns:1fr; }
+  footer { flex-direction:column; gap:6px; padding:20px 24px; text-align:center; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-brand">
+    <div class="nav-logo">M</div>
+    <span class="nav-name">MAVI × Shreyash Gupta</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#funnel">The Funnel</a></li>
+    <li><a href="#system">System Design</a></li>
+    <li><a href="#team">The Team</a></li>
+    <li><a href="#leadership">Leadership</a></li>
+  </ul>
+  <div class="nav-pill">Head of Supply Growth</div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-dots"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-inner">
+    <div class="hero-badge"><span class="hero-badge-dot"></span>Take-Home Assessment</div>
+    <h1>Building MAVI's<br><span class="ac">Supply Engine</span></h1>
+    <p class="hero-desc">A system designed to reliably admit 300 high-quality, vetted finance and accounting professionals per month, at the right speed, with the right quality, in the right segments.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-val">300</span><span class="hero-stat-lbl">Admissions / month</span></div>
+      <div class="hero-stat"><span class="hero-stat-val">5 stages</span><span class="hero-stat-lbl">End-to-end funnel</span></div>
+      <div class="hero-stat"><span class="hero-stat-val">5 → 6</span><span class="hero-stat-lbl">Team headcount</span></div>
+      <div class="hero-stat"><span class="hero-stat-val">Shreyash Gupta</span><span class="hero-stat-lbl">Candidate</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FUNNEL -->
+<section id="funnel" class="sec">
+  <div class="sec-tag">01 · The Funnel</div>
+  <h2>Reverse-engineering 300 admissions/month</h2>
+  <p class="sec-sub">From a demand-informed supply mix. The 300 target is segmented by role, seniority, software, and geography to match real client demand. Click each stage to see the design detail.</p>
+
+  <div class="funnel-layout">
+    <div class="funnel-col fu">
+
+      <!-- Stage 1 -->
+      <div class="fstage">
+        <div class="fbar-wrap"><div class="fbar" onclick="toggleFunnel(this, 'tofu')">
+          <div class="fbar-left">
+            <div class="fbar-name">Top of Funnel</div>
+            <div class="fbar-desc">Relevance &amp; intent · Multi-channel sourcing</div>
+          </div>
+          <div class="fbar-right">
+            <span class="pill async">Multi-channel</span>
+            <span class="fvol">~2,000</span>
+            <span class="fbar-toggle">+</span>
+          </div>
+        </div></div>
+        <div class="fdetail" id="detail-tofu">
+          <div class="fdetail-inner">
+            <div><div class="fdetail-col-title">What we measure</div><div class="fdetail-col-text">Are the right people entering the funnel? Quality of intent and relevance to finance/accounting roles in target geographies.</div></div>
+            <div><div class="fdetail-col-title">Drop-off drivers</div><div class="fdetail-col-text">Poor channel targeting; weak ICP definition; low-signal traffic from untargeted sources generating volume but not quality.</div></div>
+            <div><div class="fdetail-col-title">Design note</div><div class="fdetail-col-text">TOFU is owned by Growth but informed by Supply. Weekly pass-rate-by-channel data flows from us to them, continuously sharpening channel prioritisation.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="farrow"><div class="farrow-line"></div><span class="farrow-txt">50% convert</span><div class="farrow-line"></div></div>
+
+      <!-- Stage 2 -->
+      <div class="fstage">
+        <div class="fbar-wrap"><div class="fbar" onclick="toggleFunnel(this, 'app')">
+          <div class="fbar-left">
+            <div class="fbar-name">Application + Async Assessment</div>
+            <div class="fbar-desc">Basic qualification · US GAAP · Software proficiency · ~40 min, one sitting</div>
+          </div>
+          <div class="fbar-right">
+            <span class="pill auto">Automated</span>
+            <span class="fvol">~1,000</span>
+            <span class="fbar-toggle">+</span>
+          </div>
+        </div></div>
+        <div class="fdetail" id="detail-app">
+          <div class="fdetail-inner">
+            <div><div class="fdetail-col-title">What we test</div><div class="fdetail-col-text">Basic qualification (role, experience, geography) + US GAAP fundamentals, software proficiency (QBO, NetSuite, Excel), technical accounting knowledge.</div></div>
+            <div><div class="fdetail-col-title">Drop-off drivers</div><div class="fdetail-col-text">Front-loaded effort deliberately self-selects out low-intent candidates. This is by design.. Abandonment from passive candidates who weren't serious.</div></div>
+            <div><div class="fdetail-col-title">Design note</div><div class="fdetail-col-text">Bundled in one ~40-min sitting to eliminate re-engagement risk. Hard filters auto-reject before any human review. Auto-scored against a hard pass threshold. No human in the loop at this stage..</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="farrow"><div class="farrow-line"></div><span class="farrow-txt">90% pass · runs in parallel</span><div class="farrow-line"></div></div>
+
+      <!-- Stage 3 -->
+      <div class="fstage">
+        <div class="fbar-wrap"><div class="fbar" onclick="toggleFunnel(this, 'bg')">
+          <div class="fbar-left">
+            <div class="fbar-name">Background Check</div>
+            <div class="fbar-desc">Credential verification · KYC · triggered automatically on submission</div>
+          </div>
+          <div class="fbar-right">
+            <span class="pill auto">Automated</span>
+            <span class="fvol">~900</span>
+            <span class="fbar-toggle">+</span>
+          </div>
+        </div></div>
+        <div class="fdetail" id="detail-bg">
+          <div class="fdetail-inner">
+            <div><div class="fdetail-col-title">What we verify</div><div class="fdetail-col-text">Credential cross-check (CPA, Big 4, certifications), KYC identity verification, work history validation against what was stated in the application.</div></div>
+            <div><div class="fdetail-col-title">Drop-off drivers</div><div class="fdetail-col-text">Misrepresented credentials: exactly what this stage is designed to catch. A low drop-off rate here is a positive quality signal about the TOFU channels.</div></div>
+            <div><div class="fdetail-col-title">Design note</div><div class="fdetail-col-text">Runs in parallel with application review, with no sequential wait, compresses total turnaround time significantly. 24hr SLA. Binary pass/fail auto-triggers video pre-screen. Tool: Persona or Checkr.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="farrow"><div class="farrow-line"></div><span class="farrow-txt">65% convert</span><div class="farrow-line"></div></div>
+
+      <!-- Stage 4 -->
+      <div class="fstage">
+        <div class="fbar-wrap"><div class="fbar" onclick="toggleFunnel(this, 'video')">
+          <div class="fbar-left">
+            <div class="fbar-name">Video Pre-screen</div>
+            <div class="fbar-desc">English baseline · communication coherence · earned step</div>
+          </div>
+          <div class="fbar-right">
+            <span class="pill async">Async review</span>
+            <span class="fvol">~600</span>
+            <span class="fbar-toggle">+</span>
+          </div>
+        </div></div>
+        <div class="fdetail" id="detail-video">
+          <div class="fdetail-inner">
+            <div><div class="fdetail-col-title">What we assess</div><div class="fdetail-col-text">English communication baseline, ability to articulate clearly and coherently under mild pressure, basic professionalism signals that predict US client-facing performance.</div></div>
+            <div><div class="fdetail-col-title">Drop-off drivers</div><div class="fdetail-col-text">Some friction-driven drop-off from candidates not serious enough to record a video. The genuine communication bar doing its job. Both types of drop-off are acceptable.</div></div>
+            <div><div class="fdetail-col-title">Design note</div><div class="fdetail-col-text">Earned step: only unlocked after application + background check both clear. No wasted review time on unqualified candidates. As volume scales, AI-driven scoring of communication quality and professionalism signals is the natural automation frontier here.</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="farrow"><div class="farrow-line"></div><span class="farrow-txt">~400 complete calls (33% scheduling attrition)</span><div class="farrow-line"></div></div>
+
+      <!-- Stage 5 -->
+      <div class="fstage">
+        <div class="fbar-wrap"><div class="fbar" onclick="toggleFunnel(this, 'vetting')">
+          <div class="fbar-left">
+            <div class="fbar-name">Human Vetting → Admitted ✓</div>
+            <div class="fbar-desc">Professionalism · ownership · async-readiness · communication depth</div>
+          </div>
+          <div class="fbar-right">
+            <span class="pill human">Live · 30 min</span>
+            <span class="fvol">~300</span>
+            <span class="fbar-toggle">+</span>
+          </div>
+        </div></div>
+        <div class="fdetail" id="detail-vetting">
+          <div class="fdetail-inner">
+            <div><div class="fdetail-col-title">What we assess</div><div class="fdetail-col-text">Professionalism and first-impression signals, ownership mentality and proactivity, async-readiness for cross-timezone remote work, depth of communication in a live conversation. These are the attributes clients fire people for.</div></div>
+            <div><div class="fdetail-col-title">Drop-off drivers</div><div class="fdetail-col-text">Two components: ~33% scheduling attrition (no-shows, cancellations, reschedules that fall off) reduces 600 video pre-screen passes to ~400 completed calls. Of those 400, 75% pass the quality bar = 300 admitted.</div></div>
+            <div><div class="fdetail-col-title">Design note</div><div class="fdetail-col-text">30-minute structured scorecard call. By this stage, candidates have cleared three prior filters, so the live pass rate is high (75%). Weekly calibration sessions across vetters. Every admitted candidate enters the talent pool pre-tagged by role, seniority, software, and geography.</div></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sidebar -->
+    <div class="funnel-side fu">
+      <div class="scard">
+        <div class="scard-title">🌐 TOFU Channels</div>
+        <ul>
+          <li>LinkedIn (Philippines &amp; India (Big 4 / CPA filter))</li>
+          <li>LatAm: Workana, GetOnBoard</li>
+          <li>Philippines: Kalibrr · India: Naukri</li>
+          <li>Big 4 / MNC alumni networks (high signal)</li>
+          <li>Admitted talent referral program from day one</li>
+          <li>Accounting communities &amp; WhatsApp groups</li>
+          <li>Medium-term: fractional CFO firm partnerships</li>
+        </ul>
+      </div>
+      <div class="scard">
+        <div class="scard-title">📐 Supply Segmentation</div>
+        <ul>
+          <li>Segment targets set monthly from Sales/CS demand signals</li>
+          <li>Undersupplied segments → brief to Growth</li>
+          <li>Oversupplied segments → throttled</li>
+          <li>Every admit tagged: role · seniority · software · geo</li>
+          <li>Matching = a filtered query, not a search</li>
+        </ul>
+      </div>
+      <div class="scard">
+        <div class="scard-title">🔬 Early Hypotheses</div>
+        <ul>
+          <li>Does bundled app hurt conversion or self-select serious candidates?</li>
+          <li>Which channels produce highest downstream pass rates?</li>
+          <li>Does video pre-screen materially reduce live vetting no-shows?</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SYSTEM DESIGN -->
+<section id="system" class="sec">
+  <div class="sec-tag">02 · System Design</div>
+  <h2>Push automation early. Protect human time.</h2>
+  <p class="sec-sub">Human vetting throughput is the only true bottleneck. Every automated stage exists to protect it. No engineering required at seed. Build on no-code, prove the model, then give engineering a specific problem worth solving. Click any stage for more detail.</p>
+
+  <div class="flow-grid fu">
+    <div class="flow-cell" onclick="selectFlow('app-assess')">
+      <span class="flow-badge auto">● Automated</span>
+      <div class="flow-name">Application + Async Assessment</div>
+      <div class="flow-detail">Hard filters auto-reject before any human review. Assessment auto-scored; hard threshold triggers advance or reject.</div>
+      <div class="flow-tool">Typeform → Airtable + TestGorilla</div>
+      <div class="flow-click-hint">↓ click for detail</div>
+    </div>
+    <div class="flow-cell" onclick="selectFlow('bg-check')">
+      <span class="flow-badge auto">● Automated</span>
+      <div class="flow-name">Background Check</div>
+      <div class="flow-detail">Runs in parallel with application review. 24hr SLA. Binary pass/fail auto-triggers next stage.</div>
+      <div class="flow-tool">Persona / Checkr</div>
+      <div class="flow-click-hint">↓ click for detail</div>
+    </div>
+    <div class="flow-cell" onclick="selectFlow('video-screen')">
+      <span class="flow-badge semi">● Async Review</span>
+      <div class="flow-name">Video Pre-screen</div>
+      <div class="flow-detail">Triggered only after application + background check both clear. 2–3 recorded questions reviewed async. AI-driven scoring is the natural automation frontier as volume scales.</div>
+      <div class="flow-tool">Spark Hire / Willo</div>
+      <div class="flow-click-hint">↓ click for detail</div>
+    </div>
+    <div class="flow-cell" onclick="selectFlow('live-vetting')">
+      <span class="flow-badge human">● Human</span>
+      <div class="flow-name">Live Human Vetting</div>
+      <div class="flow-detail">30-min structured scorecard. Tests professionalism, ownership, async-readiness, communication depth. The only stage that can't be automated.</div>
+      <div class="flow-tool">3 vetters at launch → scale to 4</div>
+      <div class="flow-click-hint">↓ click for detail</div>
+    </div>
+    <div class="flow-cell" onclick="selectFlow('tagging')">
+      <span class="flow-badge semi">● Semi-auto</span>
+      <div class="flow-name">Tagging &amp; Admission</div>
+      <div class="flow-detail">Scorecard auto-populates talent pool tags. Human makes final admit call. Powers the 5-day placement promise.</div>
+      <div class="flow-tool">Airtable CRM</div>
+      <div class="flow-click-hint">↓ click for detail</div>
+    </div>
+    <div class="flow-cell" onclick="selectFlow('capacity')" style="background:var(--accent-lt);">
+      <span class="flow-badge cap">● Capacity Math</span>
+      <div class="flow-name">400 calls/mo → ~18/day</div>
+      <div class="flow-detail">6 calls per vetter per day at 30 min + 15 min buffer. 3 vetters at launch, scale to 4. Leaves time for admin, async review, and calibration.</div>
+      <div class="flow-tool">Scales as volume grows</div>
+      <div class="flow-click-hint">↓ click for detail</div>
+    </div>
+  </div>
+
+  <div id="flow-detail-panel">
+    <div class="fdp-title" id="fdp-title"></div>
+    <div class="fdp-grid" id="fdp-grid"></div>
+  </div>
+
+  <div class="sys-bottom">
+    <div class="sys-card fu">
+      <div class="sys-title"><span class="dot"></span>Tooling Stack</div>
+      <div class="tool-row"><span class="tool-fn">Application + Assessment</span><span class="tool-nm">Typeform + TestGorilla</span><span class="tool-eng">No engineering</span></div>
+      <div class="tool-row"><span class="tool-fn">Background / KYC</span><span class="tool-nm">Persona</span><span class="tool-eng">No engineering</span></div>
+      <div class="tool-row"><span class="tool-fn">Video pre-screen</span><span class="tool-nm">Spark Hire</span><span class="tool-eng">No engineering</span></div>
+      <div class="tool-row"><span class="tool-fn">Scheduling</span><span class="tool-nm">Calendly</span><span class="tool-eng">No engineering</span></div>
+      <div class="tool-row"><span class="tool-fn">Pipeline + Talent CRM</span><span class="tool-nm">Airtable</span><span class="tool-eng">Minimal</span></div>
+      <div class="tool-row"><span class="tool-fn">Matching layer</span><span class="tool-nm">Engineering-built (future)</span><span class="tool-eng">When data justifies</span></div>
+    </div>
+    <div class="sys-card fu">
+      <div class="sys-title"><span class="dot"></span>Two Feedback Loops</div>
+      <div class="loop">
+        <div class="loop-lbl">Loop 1: Quality</div>
+        <div class="loop-txt">Placement performance data flows back into vetting calibration. Which scorecard criteria predicted client satisfaction? Which channels produced the best retention? Monthly review. Owner: Supply Ops Manager.</div>
+      </div>
+      <div class="loop loop2">
+        <div class="loop-lbl">Loop 2: Supply Mix</div>
+        <div class="loop-txt">Demand signals from Sales/CS translate into segment-level admission targets. Gaps flow to Growth as specific channel briefs: not "send more candidates" but "we need NetSuite-proficient Controllers from Philippines." Weekly cadence.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team" class="sec">
+  <div class="sec-tag">03 · The Team</div>
+  <h2>Lean, high-caliber, built to scale the system</h2>
+  <p class="sec-sub">Start with 5. Scale to 6 as volume hits. Every hire is defined by a scorecard before the role opens: mission, 90-day outcomes, competencies.</p>
+
+  <div class="team-grid">
+    <div class="fu">
+      <div class="team-sec-label">Structure</div>
+      <div class="org">
+        <div class="org-row">
+          <div class="org-node top">
+            <div class="org-node-title">Head of Supply Growth</div>
+            <div class="org-node-sub">Strategy · hiring · XF · metrics</div>
+          </div>
+        </div>
+        <div class="org-line"></div>
+        <div class="org-row" style="gap:20px;">
+          <div class="org-node">
+            <div class="org-node-title">Supply Ops Manager</div>
+            <div class="org-node-sub">Analytically strong · systems builder<br>data hygiene · automations</div>
+          </div>
+          <div>
+            <div class="org-node">
+              <div class="org-node-title">Vetting Specialists ×3</div>
+              <div class="org-node-sub">Live vetting · calibration<br>pre-screen review</div>
+            </div>
+            <div class="scale-note">→ Scale to ×4 as volume grows</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="fu">
+      <div class="team-sec-label">Cross-functional relationships</div>
+      <table class="cf-tbl">
+        <thead><tr><th>Partner</th><th>The working relationship</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Growth</td>
+            <td>Weekly pass-rate-by-channel flows to them. Their channel strategy adapts to what actually converts downstream, not just who applies. The dependency is mutual.</td>
+          </tr>
+          <tr>
+            <td>Product / Engineering</td>
+            <td>Clear prioritised specs, not a laundry list. No-code holds until volume forces the conversation. First real ask: the matching layer, when data justifies it.</td>
+          </tr>
+          <tr>
+            <td>Sales / CS</td>
+            <td>Demand signals in (roles, geographies, software). Supply bench visibility back out. Enables the 5-day placement promise operationally.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- LEADERSHIP -->
+<section id="leadership" class="sec">
+  <div class="sec-tag">04 · Leadership</div>
+  <h2>How I'd run this team</h2>
+  <p class="sec-sub">Management philosophy, driving performance, handling underperformers, influencing cross-functional partners, and who I'd hire.</p>
+
+  <div class="l-grid">
+
+    <div class="lcard fu">
+      <div class="lcard-tag">Management Philosophy</div>
+      <h3>Hire for strength. Calibrate autonomy. Multiply output.</h3>
+      <p>I'm not interested in managing people. I'm interested in creating conditions where smart, motivated people can do their best work, aligned to what the business needs to win. I hire for superpowers, not the absence of flaws.</p>
+      <ul class="lbullets">
+        <li>Autonomy is calibrated, not uniform. New team members on unfamiliar tasks get more structure early; experienced people on known problems get space to run</li>
+        <li>My job is to amplify: ask right questions, clear blockers, make work visible to right stakeholders</li>
+        <li>People need to feel seen and valued, not just measured. Credit flows to the people doing the work</li>
+        <li>Weekly 1:1s are non-negotiable. The agenda is owned by the team member, not me</li>
+      </ul>
+      <div class="proof">
+        <div class="proof-header">
+          <div class="proof-lbl">In practice: Float (3 months from zero)</div>
+          <button class="proof-expand-btn" onclick="toggleProof(this)">+ Full story</button>
+        </div>
+        <div class="proof-stats">
+          <div><span class="proof-stat-val">$7.2M</span><span class="proof-stat-lbl">Pipeline</span></div>
+          <div><span class="proof-stat-val">$1.3M</span><span class="proof-stat-lbl">Closed TPV</span></div>
+          <div><span class="proof-stat-val">550+</span><span class="proof-stat-lbl">Accounts engaged</span></div>
+        </div>
+        <div class="proof-story" id="proof-story">
+          <ul>
+            <li>Given a vague mandate: drive expansion across a 4,000-account pool with no playbook and a hard revenue target</li>
+            <li>Coordinated 2 BDRs, a director-level senior account manager, and cross-functional stakeholders across RevOps, Marketing, and CS, none of whom reported to me</li>
+            <li>Week 2: cold calling was producing 3–6% connect rates with high manual effort. Independently made the call to pivot to automated, personalized email outreach, using specific USD spend amounts and top 3 vendors per customer. Communicated the shift with supporting data. Didn't wait for a directive.</li>
+            <li>Personalized approach converted at 2× the rate of generic outreach (27% vs 13% meeting booking rate)</li>
+            <li>Spotted USD-on-CAD card spending in existing dashboards → built an automated FX savings cadence that warmed expansion conversations organically</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="lcard fu">
+      <div class="lcard-tag">Driving Performance</div>
+      <h3>Make the goal meaningful, then make it specific.</h3>
+      <p>People don't work hard for metrics. They work hard when they understand why the metrics matter. OKR structure, applied practically.</p>
+      <ul class="lbullets">
+        <li><strong style="color:var(--text)">Objective:</strong> Build the most trusted finance talent network in the world</li>
+        <li><strong style="color:var(--text)">Key Results:</strong> 300 admissions/month by segment · vetter pass rate floor · segment fill rate vs. demand</li>
+        <li>Everyone owns at least one KR. Accountability without ownership is just pressure</li>
+        <li>Real-time feedback: wins called out immediately, course corrections in the moment</li>
+      </ul>
+      <div class="cadence-bar">
+        <strong>Cadence:</strong> Daily pipeline check · Weekly funnel review + 1:1s · Monthly quality loop + OKR reset
+      </div>
+    </div>
+
+    <div class="lcard fu">
+      <div class="lcard-tag">Underperformers</div>
+      <h3>Care personally. Challenge directly. Never let someone fail slowly.</h3>
+      <p>The worst thing a manager can do is be kind to someone's face while they quietly fail. Feedback is delivered the moment I see a pattern, not saved for a formal process. Every person has their own psychology: underperformance is almost never about effort.</p>
+      <div class="steps">
+        <div class="step"><div class="step-num">1</div><div><div class="step-title">Understand first</div><div class="step-text">Genuine conversation, not a warning. What energises them? What does great work feel like from their perspective?</div></div></div>
+        <div class="step"><div class="step-num">2</div><div><div class="step-title">Reset the contract</div><div class="step-text">If a pathway exists: reshape the role, clarify success metrics, agree on timeline. Commit to what I'll do differently too.</div></div></div>
+        <div class="step"><div class="step-num">3</div><div><div class="step-title">Part ways decisively</div><div class="step-text">If there's no pathway, move quickly and cleanly. Keeping a mismatched person costs the business and the individual.</div></div></div>
+      </div>
+    </div>
+
+    <div class="lcard fu">
+      <div class="lcard-tag">How I Influence</div>
+      <h3>Influence without authority is the real job.</h3>
+      <p>At seed stage, almost nothing important happens within your direct reporting line. Getting things done means bringing people along through shared interest and mutual trust.</p>
+      <div>
+        <div class="inf-item"><div class="inf-title">Growth</div><div class="inf-text">Built on a data exchange: pass-rate-by-channel to them, sourcing data to me. Joint decisions on quality vs. volume. The dependency is mutual and I make sure both sides feel that.</div></div>
+        <div class="inf-item"><div class="inf-title">Product / Engineering</div><div class="inf-text">Lead with the problem, make it interesting. At Float: got an LLM pipeline built by framing it as a genuine technical challenge to someone outside my reporting line. Gave him full public credit; he presented at All Hands. He became a committed partner because he felt ownership, not obligation.</div></div>
+        <div class="inf-item"><div class="inf-title">Own team</div><div class="inf-text">Here's the target, here's why it matters, here's how your work connects to the outcome. Recognition isn't a nice-to-have. It's how people know their work matters.</div></div>
+      </div>
+    </div>
+
+    <div class="lcard wide fu">
+      <div class="lcard-tag">Who I Hire</div>
+      <h3>Build the scorecard before you open the role: mission, 90-day outcomes, competencies.</h3>
+      <p>I hire for the presence of exceptional strengths, not the absence of flaws. Every interview evaluates against the same pre-defined bar.</p>
+      <div class="hire-wrap">
+        <div>
+          <div class="hire-sub">Vetting Specialists</div>
+          <div class="hire-desc">High interpersonal intelligence · personal quality bar held independently · emotionally self-aware under volume pressure. What I can't train is judgment and standards.</div>
+          <table class="hire-tbl">
+            <thead><tr><th>Dimension</th><th>Great</th><th>Average</th></tr></thead>
+            <tbody>
+              <tr><td>Quality</td><td>Same pass/fail as peers, articulates why</td><td>Inconsistent, defers to instinct</td></tr>
+              <tr><td>Pressure</td><td>Holds bar when throughput spikes</td><td>Softens bar under volume</td></tr>
+              <tr><td>Calibration</td><td>Proactively flags edge cases</td><td>Waits to be told</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div>
+          <div class="hire-sub">Supply Ops Manager</div>
+          <div class="hire-desc">Energised by building something that doesn't exist yet. Highly analytical: spreadsheets, SQL, BI tools, no-code automation. Proactive above everything else.</div>
+          <table class="hire-tbl">
+            <thead><tr><th>Dimension</th><th>Great</th><th>Average</th></tr></thead>
+            <tbody>
+              <tr><td>Instinct</td><td>Tells me about drops before I see them</td><td>Reactive, waits for direction</td></tr>
+              <tr><td>Systems</td><td>Treats tracker as diagnostic tool</td><td>Treats tracker as a record</td></tr>
+              <tr><td>Ownership</td><td>Flags problems with solutions</td><td>Flags and stops there</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-l">Shreyash Gupta | Head of Supply Growth Assessment · MAVI</div>
+  <div class="footer-r">maviwork.com · 2026</div>
+</footer>
+
+<script>
+// ── Funnel toggle ──
+function toggleFunnel(barEl, id) {
+  const detail = document.getElementById('detail-' + id);
+  const isOpen = barEl.classList.contains('open');
+  // Close all
+  document.querySelectorAll('.fbar.open').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.fdetail.open').forEach(d => d.classList.remove('open'));
+  // Open this one if it wasn't open
+  if (!isOpen) {
+    barEl.classList.add('open');
+    detail.classList.add('open');
+  }
+}
+
+// ── Flow cell selection ──
+const flowData = {
+  'app-assess': {
+    title: 'Application + Async Assessment: Design Detail',
+    cols: [
+      { label: 'Why bundled', text: 'Combining application + assessment in one ~40-min sitting eliminates re-engagement risk between stages, the silent killer in async funnels. From the candidate\'s view, it\'s one commitment moment.' },
+      { label: 'How it\'s scored', text: 'Hard filters auto-reject obvious mismatches before any human review. Assessment is auto-scored by TestGorilla against a hard pass threshold. No human in the loop until the background check clears.' },
+      { label: 'What happens on pass', text: 'Auto-advance to background check (triggered simultaneously). Candidate gets a confirmation. Airtable pipeline record created. No manual steps required.' }
+    ]
+  },
+  'bg-check': {
+    title: 'Background Check: Design Detail',
+    cols: [
+      { label: 'What we verify', text: 'Credential cross-check (CPA, Big 4, certifications claimed in application), KYC identity verification, work history validation. Catches misrepresentation before human time is invested.' },
+      { label: 'Parallel processing', text: 'Runs simultaneously with application review, not sequentially after it. This compresses total candidate turnaround time by 24–48 hours, directly supporting the 5-day placement promise.' },
+      { label: 'SLA + tooling', text: '24hr SLA via Persona or Checkr. Binary pass/fail auto-triggers video pre-screen on pass. Auto-sends rejection communication on fail. Zero human touch required.' }
+    ]
+  },
+  'video-screen': {
+    title: 'Video Pre-screen: Design Detail',
+    cols: [
+      { label: 'Why earned, not upfront', text: 'Asking a cold candidate to record a video before any screening creates maximum friction at minimum motivation. By earning the video step, we ensure only qualified candidates reach it, protecting team review time.' },
+      { label: 'What we look for', text: '2–3 structured questions focused on English communication clarity, ability to articulate under mild pressure, and basic professional norms. These are the attributes US clients will actually notice daily.' },
+      { label: 'Automation frontier', text: 'As volume scales, AI-driven scoring of communication quality, accent clarity, and professionalism signals is the natural next automation layer here, reducing manual review without losing signal quality.' }
+    ]
+  },
+  'live-vetting': {
+    title: 'Live Human Vetting: Design Detail',
+    cols: [
+      { label: 'Structured scorecard', text: 'Every vetter uses the same scorecard. Dimensions: professionalism signals, ownership and proactivity, async-readiness for cross-timezone remote work, depth and clarity of communication in a live context.' },
+      { label: 'Calibration system', text: 'Weekly calibration sessions across vetters: reviewing edge cases, aligning on borderline decisions, listening to sample calls. Inter-rater consistency is the biggest quality risk at scale and must be actively managed.' },
+      { label: 'Capacity design', text: '~600 pass video pre-screen → ~33% scheduling attrition → ~400 completed 30-min calls → 75% quality pass rate = 300 admitted. 18 calls/day → 6 calls/vetter/day across 3 vetters, with ~3.5 hrs/day remaining for admin and calibration.' }
+    ]
+  },
+  'tagging': {
+    title: 'Tagging and Admission: Design Detail',
+    cols: [
+      { label: 'Tag taxonomy', text: 'Every admitted candidate is tagged across four dimensions: role type (Controller, AP/AR, Senior Accountant, etc.), seniority level, software proficiency (QBO, NetSuite, Excel, etc.), and geography.' },
+      { label: 'Talent pool CRM', text: 'Airtable at seed. Admitted candidates enter a queryable bench. Matching a client request means filtering the bench, not searching it. This is what makes the 5-day placement promise operationally real.' },
+      { label: 'Human final call', text: 'Scorecard auto-populates the tags, but a human makes the final admit decision. Keeps quality accountability clear and prevents edge cases from slipping through on a technicality.' }
+    ]
+  },
+  'capacity': {
+    title: 'Capacity Planning: The Math',
+    cols: [
+      { label: 'Funnel to daily calls', text: '~600 pass video pre-screen → ~33% scheduling attrition (no-shows, cancellations) → ~400 completed calls/month → ~18 calls/day across a 22-day working month.' },
+      { label: 'Vetter capacity', text: '30-min call + 15-min buffer + scorecard write-up = ~6 calls/vetter/day. 3 vetters handles steady-state volume comfortably. Trigger for vetter 4: sustained >80% utilisation for 4 weeks.' },
+      { label: 'Engineering footprint', text: 'Zero engineering required at seed. Entire stack runs on Typeform, TestGorilla, Persona, Spark Hire, Calendly, and Airtable, all connected via Zapier/Make automations. First engineering investment: matching layer, triggered by data, not preference.' }
+    ]
+  }
+};
+
+let selectedCell = null;
+function selectFlow(id) {
+  const panel = document.getElementById('flow-detail-panel');
+  const cells = document.querySelectorAll('.flow-cell');
+
+  if (selectedCell === id) {
+    // Toggle off
+    cells.forEach(c => c.classList.remove('selected'));
+    panel.classList.remove('open');
+    selectedCell = null;
+    return;
+  }
+
+  cells.forEach(c => c.classList.remove('selected'));
+  const idx = ['app-assess','bg-check','video-screen','live-vetting','tagging','capacity'].indexOf(id);
+  if (idx >= 0) cells[idx].classList.add('selected');
+
+  const data = flowData[id];
+  if (!data) return;
+
+  document.getElementById('fdp-title').textContent = data.title;
+  document.getElementById('fdp-grid').innerHTML = data.cols.map(c =>
+    `<div><div class="fdp-col-label">${c.label}</div><div class="fdp-col-text">${c.text}</div></div>`
+  ).join('');
+
+  panel.classList.add('open');
+  selectedCell = id;
+  setTimeout(() => panel.scrollIntoView({ behavior:'smooth', block:'nearest' }), 100);
+}
+
+// ── Proof story toggle ──
+function toggleProof(btn) {
+  const story = document.getElementById('proof-story');
+  const isOpen = story.classList.contains('open');
+  story.classList.toggle('open');
+  btn.textContent = isOpen ? '+ Full story' : '− Full story';
+}
+
+// ── Fade-up on scroll ──
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.fu').forEach(el => io.observe(el));
+
+// ── Active nav ──
+const secs = document.querySelectorAll('section[id]');
+const links = document.querySelectorAll('.nav-links a');
+const nio = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      links.forEach(l => l.classList.remove('active'));
+      const a = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+      if (a) a.classList.add('active');
+    }
+  });
+}, { threshold: 0.35 });
+secs.forEach(s => nio.observe(s));
+</script>
+</body>
+</html>

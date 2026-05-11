@@ -64,7 +64,7 @@ nav {
 
 /* ── SECTIONS ── */
 .sec { position:relative; max-width:1120px; margin:0 auto; padding:96px 48px; }
-.sec + .sec { border-top:1px solid var(--border); }
+.sec + .sec { border-top:1px solid rgba(255,255,255,0.12); }
 
 .sec-tag {
   display:inline-flex; align-items:center; gap:8px;
@@ -437,6 +437,50 @@ footer { border-top:1px solid var(--border); padding:28px 80px; display:flex; ju
   .fdetail-inner,.fdp-grid { grid-template-columns:1fr; }
   footer { flex-direction:column; gap:6px; padding:20px 24px; text-align:center; }
 }
+
+/* ── LEADERSHIP ACCENT SHIFT ── */
+#leadership {
+  --accent:    #F59E0B;
+  --accent-lt: rgba(245,158,11,0.12);
+  --accent-bd: rgba(245,158,11,0.28);
+  background: #110C02;
+}
+
+#leadership .sec-tag { color: var(--accent); }
+#leadership .sec-tag::before { background: var(--accent); }
+#leadership .lcard:hover { border-color: var(--accent-bd); }
+#leadership .lcard-tag { color: var(--accent); }
+#leadership .lbullets li::before { color: var(--accent); }
+#leadership .step-num { background: var(--accent-lt); border-color: var(--accent-bd); color: var(--accent); }
+#leadership .proof { background: var(--accent-lt); border-color: var(--accent-bd); }
+#leadership .proof-lbl { color: var(--accent); }
+#leadership .proof-expand-btn { color: var(--accent); border-color: var(--accent-bd); }
+#leadership .proof-expand-btn:hover { background: var(--accent); }
+#leadership .proof-story ul li::before { color: var(--accent); }
+#leadership .inf-item { border-left-color: var(--accent-bd); }
+#leadership .inf-title { color: var(--accent); }
+#leadership .hire-tbl td:nth-child(2) { color: #F59E0B; }
+#leadership .cadence-bar strong { color: var(--text-2); }
+#leadership h2 { color: var(--text); }
+
+
+#leadership .lcard {
+  background: #1A1203;
+  border-color: rgba(245,158,11,0.15);
+}
+#leadership .lcard:hover {
+  border-color: rgba(245,158,11,0.4);
+}
+#leadership .hire-tbl th {
+  color: rgba(245,158,11,0.5);
+}
+#leadership .hire-tbl td {
+  border-bottom-color: rgba(245,158,11,0.08);
+}
+#leadership .sys-title .dot {
+  background: var(--accent);
+}
+
 </style>
 </head>
 <body>
@@ -607,12 +651,12 @@ footer { border-top:1px solid var(--border); padding:28px 80px; display:flex; ju
       <div class="scard">
         <div class="scard-title">🌐 TOFU Channels</div>
         <ul>
-          <li>LinkedIn (Philippines &amp; India (Big 4 / CPA filter))</li>
+          <li>LinkedIn (Big 4 / CPA filter)</li>
           <li>LatAm: Workana, GetOnBoard</li>
           <li>Philippines: Kalibrr · India: Naukri</li>
           <li>Big 4 / MNC alumni networks (high signal)</li>
           <li>Admitted talent referral program from day one</li>
-          <li>Accounting communities &amp; WhatsApp groups</li>
+          <li>Accounting communities</li>
           <li>Medium-term: fractional CFO firm partnerships</li>
         </ul>
       </div>
@@ -632,6 +676,8 @@ footer { border-top:1px solid var(--border); padding:28px 80px; display:flex; ju
           <li>Does bundled app hurt conversion or self-select serious candidates?</li>
           <li>Which channels produce highest downstream pass rates?</li>
           <li>Does video pre-screen materially reduce live vetting no-shows?</li>
+          <li>Biggest bottleneck: live human vetting throughput. Cannot scale headcount linearly with volume</li>
+          <li>Scheduling attrition / no-shows can be minimized with automated reminders</li>
         </ul>
       </div>
     </div>
@@ -774,6 +820,7 @@ footer { border-top:1px solid var(--border); padding:28px 80px; display:flex; ju
   </div>
 </section>
 
+<div style="width:100vw; position:relative; left:50%; right:50%; margin-left:-50vw; margin-right:-50vw; border-top: 1px solid rgba(245,158,11,0.25); background: linear-gradient(90deg, transparent, rgba(245,158,11,0.15), transparent); height:1px;"></div>
 <!-- LEADERSHIP -->
 <section id="leadership" class="sec">
   <div class="sec-tag">04 · Leadership</div>
